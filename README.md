@@ -15,3 +15,4 @@ Using Packer as plugin manager
 11. nvim-cmp
 12. nvim-lspconfig
 13. nvim-autopairs
+14. vim-fugitive
