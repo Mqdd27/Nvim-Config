@@ -35,29 +35,8 @@ require("packer").startup(function(use)
 	  end
   }
   use 'romgrk/barbar.nvim'
-  use {
-	  'tanvirtin/vgit.nvim',
-	  requires = { 'nvim-lua/plenary.nvim' },
-	  -- Lazy loading on 'VimEnter' event is necessary.
-	  event = 'VimEnter',
-	  config = function() require("vgit").setup({
-		    settings = {
-			    live_gutter = {
-				    enabled = true,
-			    },
-			    authorship_code_lens = {
-				    enabled = true,
-			    },
-			    scene = {
-				    diff_preference = 'unified', -- Pilihan: 'unified' atau 'split'
-			    },
-			    signs = {
-				    add = { text = '+' },
-				    remove = { text = '-' },
-				    change = { text = '~' },
-			    },
-		    }
-	    }) end,
-    }
+
+  use { 'tpope/vim-fugitive' }
+
 end)
 
