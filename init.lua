@@ -5,7 +5,6 @@ vim.o.ignorecase = false  -- Disable case-insensitive
 vim.o.smartcase = false   -- Disable smart case
 vim.opt.smartindent = true -- Smart Indent
 
-
 require("keymaps")
 require("plugins")
 require("lsp")
