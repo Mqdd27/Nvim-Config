@@ -88,3 +88,8 @@ map('n', '<Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', opts)
 map('n', '<leader>git', '<Cmd>Git<CR>', opts)
 map('n', '<leader>gtc', '<Cmd>Git commit<CR>', opts)
 map('n', '<leader>gtp', '<Cmd>Git push<CR>', opts)
+
+-- Treesitter
+map("n", "gnn", ":TSIncrementalSelection<CR>", opts)
+map("n", "grn", ":TSNodeIncremental<CR>", opts)
+map("n", "grm", ":TSNodeDecremental<CR>", opts)
