@@ -83,3 +83,8 @@ map('n', '<Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', opts)
 -- Other:
 -- :BarbarEnable - enables barbar (enabled by default)
 -- :BarbarDisable - very bad command, should never be used
+
+-- Git
+map('n', '<leader>git', '<Cmd>Git<CR>', opts)
+map('n', '<leader>gtc', '<Cmd>Git commit<CR>', opts)
+map('n', '<leader>gtp', '<Cmd>Git push<CR>', opts)
