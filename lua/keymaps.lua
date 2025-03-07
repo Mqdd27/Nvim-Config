@@ -1,8 +1,14 @@
 local map = vim.api.nvim_set_keymap
+local vmap = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
 -- other
 map('n', 'x', '"_x', opts) -- don't copy deleted text
+map('v', '<A-c>', '"+y', opts)
+map("n", "<A-v>", '"+p', opts)
+map("i", "<A-v>", '<C-r>+', opts)
+map("v", "<A-v>", '"+p', opts)
+
 
 -- window management
 map("n", "<leader>h", "<C-w>h", opts)
@@ -22,23 +28,23 @@ map("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- Codeium Keybinding
 -- vim.keymap.set("i", "<A-l>", function() require("neocodeium").accept() end, { noremap = true, silent = true })
-vim.keymap.set("i", "<A-f>", function()
-    require("neocodeium").accept()
+vmap("i", "<A-f>", function()
+	require("neocodeium").accept()
 end)
-vim.keymap.set("i", "<A-w>", function()
-    require("neocodeium").accept_word()
+vmap("i", "<A-w>", function()
+	require("neocodeium").accept_word()
 end)
-vim.keymap.set("i", "<A-a>", function()
-    require("neocodeium").accept_line()
+vmap("i", "<A-a>", function()
+	require("neocodeium").accept_line()
 end)
-vim.keymap.set("i", "<A-e>", function()
-    require("neocodeium").cycle_or_complete()
+vmap("i", "<A-e>", function()
+	require("neocodeium").cycle_or_complete()
 end)
-vim.keymap.set("i", "<A-r>", function()
-    require("neocodeium").cycle_or_complete(-1)
+vmap("i", "<A-r>", function()
+	require("neocodeium").cycle_or_complete(-1)
 end)
-vim.keymap.set("i", "<A-c>", function()
-    require("neocodeium").clear()
+vmap("i", "<A-c>", function()
+	require("neocodeium").clear()
 end)
 
 -- Barbar

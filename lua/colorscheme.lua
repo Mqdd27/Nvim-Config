@@ -6,5 +6,6 @@ require('themify').setup({
 	'nyoom-engineering/oxocarbon.nvim',
 	'glepnir/zephyr-nvim',
 	'ribru17/bamboo.nvim',
+	"https://gitlab.com/bartekjaszczak/luma-nvim",
 	'default'
 })
