@@ -93,6 +93,7 @@ map('n', '<Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', opts)
 -- Git
 map('n', '<leader>git', '<Cmd>Git<CR>', opts)
 map('n', '<leader>gtc', '<Cmd>Git commit<CR>', opts)
+map('n', '<leader>gtf', '<Cmd>Git pull<CR>', opts)
 map('n', '<leader>gtp', '<Cmd>Git push<CR>', opts)
 
 -- Treesitter
