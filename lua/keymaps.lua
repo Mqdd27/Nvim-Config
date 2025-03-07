@@ -93,3 +93,6 @@ map('n', '<leader>gtp', '<Cmd>Git push<CR>', opts)
 map("n", "gnn", ":TSIncrementalSelection<CR>", opts)
 map("n", "grn", ":TSNodeIncremental<CR>", opts)
 map("n", "grm", ":TSNodeDecremental<CR>", opts)
+
+--Themify
+map("n", "<leader>th", ":Themify<CR>", opts)

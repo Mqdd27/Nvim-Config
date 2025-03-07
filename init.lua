@@ -7,6 +7,7 @@ vim.opt.smartindent = true -- Smart Indent
 
 require("keymaps")
 require("plugins")
+require("colorscheme")
 require("lsp")
 require("treesitter")
-require("ui")
+-- require("ui")

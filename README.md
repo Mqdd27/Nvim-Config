@@ -16,3 +16,4 @@ Using Packer as plugin manager
 12. nvim-lspconfig
 13. nvim-autopairs
 14. vim-fugitive
+15. Themify
