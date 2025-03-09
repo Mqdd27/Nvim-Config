@@ -95,6 +95,8 @@ map('n', '<leader>git', '<Cmd>Git<CR>', opts)
 map('n', '<leader>gtc', '<Cmd>Git commit<CR>', opts)
 map('n', '<leader>gtf', '<Cmd>Git pull<CR>', opts)
 map('n', '<leader>gtp', '<Cmd>Git push<CR>', opts)
+map('n', '<leader>gtb', '<Cmd>Git branch<CR>', opts)
+map('n', '<leader>gts', '<Cmd>Git status<CR>', opts)
 
 -- Treesitter
 map("n", "gnn", ":TSIncrementalSelection<CR>", opts)
