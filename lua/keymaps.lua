@@ -18,6 +18,32 @@ map("n", "<leader>l", "<C-w>l", opts)
 
 
 -- Telescope
+local actions = require("telescope.actions")
+local telescope = require("telescope")
+
+telescope.setup({
+	defaults = {
+		mappings = {
+			i = { 
+				["<C-h>"] = actions.move_selection_worse,
+				["<C-l>"] = actions.move_selection_better,
+				["<C-j>"] = actions.move_selection_next,
+				["<C-k>"] = actions.move_selection_previous,
+				["<C-S-j>"] = actions.preview_scrolling_down,
+				["<C-S-k>"] = actions.preview_scrolling_up,
+			},
+			n = { 
+				["<C-h>"] = actions.move_selection_worse,
+				["<C-l>"] = actions.move_selection_better,
+				["<C-j>"] = actions.move_selection_next,
+				["<C-k>"] = actions.move_selection_previous,
+				["<C-S-j>"] = actions.preview_scrolling_down,
+				["<C-S-k>"] = actions.preview_scrolling_up,
+			}
+		}
+	}
+})
+
 map("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
 map("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts)
 map("n", "<leader>fb", "<cmd>Telescope buffers<cr>", opts)
