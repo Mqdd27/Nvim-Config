@@ -7,5 +7,6 @@ require('themify').setup({
 	'glepnir/zephyr-nvim',
 	'ribru17/bamboo.nvim',
 	"https://gitlab.com/bartekjaszczak/luma-nvim",
+	'Mofiqul/dracula.nvim',
 	'default'
 })
