@@ -110,6 +110,11 @@ _G.packer_plugins = {
     path = "/home/kimp/.local/share/nvim/site/pack/packer/start/neocodeium",
     url = "https://github.com/monkoose/neocodeium"
   },
+  ["null-ls.nvim"] = {
+    loaded = true,
+    path = "/home/kimp/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+  },
   ["nvim-autopairs"] = {
     config = { "\27LJ\2\n<\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0" },
     loaded = false,
@@ -169,11 +174,6 @@ _G.packer_plugins = {
     path = "/home/kimp/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
-  ["text-to-colorscheme.nvim"] = {
-    loaded = true,
-    path = "/home/kimp/.local/share/nvim/site/pack/packer/start/text-to-colorscheme.nvim",
-    url = "https://github.com/svermeulen/text-to-colorscheme.nvim"
-  },
   ["themify.nvim"] = {
     config = {},
     loaded = true,
@@ -198,6 +198,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14nvim-tree\frequire\0", "config", "nvim-tree.lua")
+time([[Config for nvim-tree.lua]], false)
 -- Config for: neocodeium
 time([[Config for neocodeium]], true)
 try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\1\2\0B\1\1\1K\0\1\0\nsetup\15neocodeium\frequire\0", "config", "neocodeium")
@@ -205,10 +209,6 @@ time([[Config for neocodeium]], false)
 -- Config for: themify.nvim
 time([[Config for themify.nvim]], true)
 time([[Config for themify.nvim]], false)
--- Config for: nvim-tree.lua
-time([[Config for nvim-tree.lua]], true)
-try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14nvim-tree\frequire\0", "config", "nvim-tree.lua")
-time([[Config for nvim-tree.lua]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads

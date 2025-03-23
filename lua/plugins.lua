@@ -21,11 +21,12 @@ require("packer").startup(function(use)
 	use "numToStr/Comment.nvim"
 	use { 'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} } }
 	use { 'nvim-tree/nvim-tree.lua',config = function() require("nvim-tree").setup() end }
-	use "jwalton512/vim-blade"
+	use "jose-elias-alvarez/null-ls.nvim"
 	use "AlphaTechnolog/pywal.nvim"
 	use { "windwp/nvim-autopairs", event = "InsertEnter", config = function() require("nvim-autopairs").setup() end }
 	use "lewis6991/gitsigns.nvim"
 	use "mfussenegger/nvim-lint"
+	use 'jwalton512/vim-blade'
 	use {
 		"monkoose/neocodeium",
 		config = function()

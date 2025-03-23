@@ -14,5 +14,21 @@ lspconfig.jsonls.setup{}
 lspconfig.tailwindcss.setup{}
 lspconfig.intelephense.setup{}
 
-require("which-key").setup()
 
+local null_ls = require("null-ls")
+
+null_ls.setup({
+	sources = {
+		null_ls.builtins.formatting.blade_formatter,
+	},
+})
+
+-- Autoformat saat save untuk Blade
+vim.api.nvim_create_autocmd("BufWritePre", {
+	pattern = "*.blade.php",
+	callback = function()
+		vim.lsp.buf.format({ async = true })
+	end,
+})
+
+require("which-key").setup()
