@@ -12,6 +12,12 @@ require("packer").startup(function(use)
 	use "wbthomason/packer.nvim"
 	use "nvim-treesitter/nvim-treesitter"
 	use "hrsh7th/nvim-cmp"
+	use 'onsails/lspkind.nvim'
+	use 'hrsh7th/cmp-nvim-lsp'
+	use 'hrsh7th/cmp-buffer'
+	use 'hrsh7th/cmp-path'
+	use 'hrsh7th/cmp-cmdline'
+	use 'L3MON4D3/LuaSnip'
 	use "folke/which-key.nvim"
 	use "nvim-tree/nvim-web-devicons"
 	use "echasnovski/mini.icons"
