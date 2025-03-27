@@ -22,7 +22,7 @@ null_ls.setup({
 		null_ls.builtins.formatting.blade_formatter,
 		null_ls.builtins.formatting.prettier.with({
 			filetypes = {
-				"blade.php",
+				-- "blade.php",
 				"php",
 				"html",
 				"css",
@@ -52,7 +52,7 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 })
 
 vim.api.nvim_create_autocmd("BufWritePre", {
-	pattern = { "*.php", "*.blade.php", "*.js", "*.ts", "*.json", "*.css", "*.lua", "*.sh", "*.html" },
+	pattern = { "*.php", "*.js", "*.ts", "*.json", "*.css", "*.lua", "*.sh", "*.html" },
 	callback = function()
 		vim.lsp.buf.format({ async = false })
 	end,
