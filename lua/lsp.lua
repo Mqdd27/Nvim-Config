@@ -41,6 +41,16 @@ null_ls.setup({
 		null_ls.builtins.diagnostics.eslint,
 		null_ls.builtins.diagnostics.stylelint,
 	},
+	on_attach = function(client, bufnr)
+		if client.supports_method("textDocument/formatting") then
+			vim.api.nvim_create_autocmd("BufWritePre", {
+				buffer = bufnr,
+				callback = function()
+					vim.lsp.buf.format({ async = false })
+				end
+			})
+		end
+	end
 })
 
 -- Autoformat saat save untuk Blade

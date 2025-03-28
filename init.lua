@@ -6,7 +6,9 @@ vim.o.smartcase = true     -- smart case
 vim.opt.smartindent = true -- Smart Indent
 vim.opt.shiftwidth = 4     -- Change indent width
 vim.opt.tabstop = 4        -- Indent width
-
+vim.opt.incsearch = true
+-- vim.opt.hlsearch = false
+vim.opt.termguicolors = true
 
 require("keymaps")
 require("plugins")

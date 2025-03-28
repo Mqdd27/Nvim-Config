@@ -9,6 +9,14 @@ map("n", "<A-v>", '"+p', opts)
 map("i", "<A-v>", '<C-r>+', opts)
 map("v", "<A-v>", '"+p', opts)
 
+vmap("v", "J", ":m '>+1<CR>gv=gv")
+vmap("v", "K", ":m '<-2<CR>gv=gv")
+
+vmap("n", "<C-d>", "<C-d>zz")
+vmap("n", "<C-u>", "<C-u>zz")
+
+vmap("n", "n", "nzzzv")
+vmap("n", "N", "Nzzzv")
 
 -- window management
 map("n", "<leader>h", "<C-w>h", opts)
@@ -24,7 +32,7 @@ local telescope = require("telescope")
 telescope.setup({
 	defaults = {
 		mappings = {
-			i = { 
+			i = {
 				["<C-h>"] = actions.move_selection_worse,
 				["<C-l>"] = actions.move_selection_better,
 				["<C-j>"] = actions.move_selection_next,
@@ -32,7 +40,7 @@ telescope.setup({
 				["<C-S-j>"] = actions.preview_scrolling_down,
 				["<C-S-k>"] = actions.preview_scrolling_up,
 			},
-			n = { 
+			n = {
 				["<C-h>"] = actions.move_selection_worse,
 				["<C-l>"] = actions.move_selection_better,
 				["<C-j>"] = actions.move_selection_next,
@@ -102,7 +110,7 @@ map('n', '<A-c>', '<Cmd>BufferClose<CR>', opts)
 
 
 -- Magic buffer-picking mode
-map('n', '<C-p>',   '<Cmd>BufferPick<CR>', opts)
+map('n', '<C-p>', '<Cmd>BufferPick<CR>', opts)
 map('n', '<C-s-p>', '<Cmd>BufferPickDelete<CR>', opts)
 
 -- Sort automatically by...

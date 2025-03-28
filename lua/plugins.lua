@@ -1,7 +1,7 @@
 local install_path = vim.fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
-  vim.fn.system({ "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path })
-  vim.cmd("packadd packer.nvim")
+	vim.fn.system({ "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path })
+	vim.cmd("packadd packer.nvim")
 end
 
 require("packer").init({
@@ -25,12 +25,14 @@ require("packer").startup(function(use)
 	use "williamboman/mason-lspconfig.nvim"
 	use "neovim/nvim-lspconfig"
 	use "numToStr/Comment.nvim"
-	use { 'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} } }
-	use { 'nvim-tree/nvim-tree.lua',config = function() require("nvim-tree").setup({
-		git = {
-			ignore = false,
-		},
-	}) end }
+	use { 'nvim-telescope/telescope.nvim', requires = { { 'nvim-lua/plenary.nvim' } } }
+	use { 'nvim-tree/nvim-tree.lua', config = function()
+		require("nvim-tree").setup({
+			git = {
+				ignore = false,
+			},
+		})
+	end }
 	use "jose-elias-alvarez/null-ls.nvim"
 	use "AlphaTechnolog/pywal.nvim"
 	use { "windwp/nvim-autopairs", event = "InsertEnter", config = function() require("nvim-autopairs").setup() end }
@@ -52,4 +54,3 @@ require("packer").startup(function(use)
 		config = {}
 	}
 end)
-
